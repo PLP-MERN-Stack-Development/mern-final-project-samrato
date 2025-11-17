@@ -1,52 +1,195 @@
-# MERN Stack Capstone Project
 
-This assignment focuses on designing, developing, and deploying a comprehensive full-stack MERN application that showcases all the skills you've learned throughout the course.
+---
 
-## Assignment Overview
+# 🐟 **AQUA – Smart Fish Monitoring System**
 
-You will:
-1. Plan and design a full-stack MERN application
-2. Develop a robust backend with MongoDB, Express.js, and Node.js
-3. Create an interactive frontend with React.js
-4. Implement testing across the entire application
-5. Deploy the application to production
+**Live Demo:** [https://aquafish-pi.vercel.app/](https://aquafish-pi.vercel.app/)
 
-## Getting Started
+AQUA is a smart IoT-enabled fish farming monitoring system that uses sensors, automation, and real-time data analytics to help fish farmers track pond conditions, reduce fish mortality, and improve productivity.
+The system integrates **MongoDB**, **Firebase Realtime Database**, and **ESP32 microcontrollers** for a complete end-to-end solution.
 
-1. Accept the GitHub Classroom assignment
-2. Clone the repository to your local machine
-3. Follow the instructions in the `Week8-Assignment.md` file
-4. Plan, develop, and deploy your capstone project
+---
 
-## Files Included
+## 🚀 **Key Features**
 
-- `Week8-Assignment.md`: Detailed assignment instructions
+### **🌡️ Real-Time Water Monitoring**
 
-## Requirements
+* Temperature
+* pH level
+* Dissolved Oxygen (DO)
+* Turbidity
+* Ammonia levels
+* Water depth/level
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Git and GitHub account
-- Accounts on deployment platforms (Render/Vercel/Netlify/etc.)
+### **⚙️ Smart Automation**
 
-## Project Ideas
+* Automatic fish feeder
+* Aerator auto-activation when oxygen is low
+* Pump control when water level is low/high
+* Auto adjustment based on sensor thresholds
 
-The `Week8-Assignment.md` file includes several project ideas, but you're encouraged to develop your own idea that demonstrates your skills and interests.
+### **📡 Real-Time Database Sync**
 
-## Submission
+* Live sensor values saved in **Firebase Realtime Database**
+* Historical data stored in **MongoDB**
+* Dashboard updates instantly without refresh
 
-Your project will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+### **📲 Web Interface Dashboard**
 
-1. Commit and push your code regularly
-2. Include comprehensive documentation
-3. Deploy your application and add the live URL to your README.md
-4. Create a video demonstration and include the link in your README.md
+Visit the live dashboard:
+👉 **[https://aquafish-pi.vercel.app/](https://aquafish-pi.vercel.app/)**
 
-## Resources
+Features:
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [Express.js Documentation](https://expressjs.com/)
-- [React Documentation](https://react.dev/)
-- [Node.js Documentation](https://nodejs.org/en/docs/)
-- [GitHub Classroom Guide](https://docs.github.com/en/education/manage-coursework-with-github-classroom) 
+* Real-time charts
+* Device control (aerator, feeder, pump)
+* Alerts log
+* Daily/weekly trends
+* Monitoring multiple ponds
+
+### **🔔 Notifications**
+
+* Threshold alerts (SMS/Email/Push)
+* Water quality warnings
+* Feeding reminders
+
+---
+
+## 🛠️ **Tech Stack**
+
+### **Hardware**
+
+* ESP32
+* DS18B20 Temperature Sensor
+* pH Sensor
+* Turbidity Sensor
+* DO Sensor
+* Ultrasonic sensor (water level)
+* Relay modules
+* Auto Feeder system
+* Aeration Motor
+
+### **Software**
+
+| Component               | Technology                 |
+| ----------------------- | -------------------------- |
+| Frontend                | React + Tailwind           |
+| Backend                 | Node.js / Express          |
+| Database 1 (Realtime)   | Firebase Realtime Database |
+| Database 2 (Historical) | MongoDB                    |
+| Hosting                 | Vercel / Render            |
+| Communication           | Firebase SDK + REST APIs   |
+| Microcontroller         | Arduino IDE (ESP32)        |
+
+---
+
+## 📦 **Installation & Setup**
+
+### **1. Clone the repository**
+
+```bash
+git clone https://github.com/your-username/aqua-smart-monitoring.git
+cd aqua-smart-monitoring
+```
+
+### **2. Install backend dependencies**
+
+```bash
+npm install
+```
+
+### **3. Environment variables**
+
+Create a `.env` file:
+
+```
+MONGO_URI=your_mongodb_connection_string
+FIREBASE_API_KEY=your_firebase_key
+FIREBASE_DB_URL=your_realtime_db_url
+JWT_SECRET=your_secret
+FEEDER_PIN=13
+AERATOR_PIN=12
+PUMP_PIN=14
+```
+
+### **4. Run backend**
+
+```bash
+npm run dev
+```
+
+### **5. Setup ESP32**
+
+Configure the following in your ESP32 code:
+
+* WiFi SSID & password
+* Firebase RTDB credentials
+* Backend API URL
+* Sensor pins
+
+Upload using Arduino IDE or PlatformIO.
+
+---
+
+## 🧪 **Core Functionalities**
+
+| Feature                   | Description                                  |
+| ------------------------- | -------------------------------------------- |
+| Live Sensor Streaming     | Firebase updates every 1–5 seconds           |
+| Historical Logging        | Saved in MongoDB                             |
+| AI Suggestions (optional) | Predict fish growth or feeding needs         |
+| Device Control            | Feeder, aerator, pump                        |
+| Alerts                    | Based on unsafe water parameters             |
+| Multi-Pond Support        | Manage multiple fishponds from one dashboard |
+
+---
+
+## 📊 **Dashboard Features**
+
+Visit: **[https://aquafish-pi.vercel.app/](https://aquafish-pi.vercel.app/)**
+
+Includes:
+
+* Live water quality charts
+* Water Quality Index (WQI) calculations
+* Fish health recommendations
+* History graphs
+* Device toggle controls
+* Real-time alerts
+
+---
+
+## 📈 **Future Enhancements**
+
+* Machine learning to predict disease outbreaks
+* Camera-based fish counting
+* Solar-powered microcontroller setup
+* Offline mode with local caching
+* Voice assistant control
+* SMS/WhatsApp integration for alerts
+
+---
+
+## 🤝 **Contributing**
+
+1. Fork the repo
+2. Create a feature branch
+3. Commit and push
+4. Submit a pull request
+
+---
+
+## 👨‍💻 Developer
+
+**Willington Juma**
+Software Developer • IoT Enthusiast • Data Engineer
+
+---
+
+## 📜 License
+
+MIT License – free to use and modify.
+
+---
+
+
